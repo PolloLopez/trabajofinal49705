@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&family=Sen&display=swap");
 .botonActual {
   text-decoration: none;
-  color: #2B2730;
+  color: #2b2d42;
   background-color: #8d99ae;
   border: 2px solid #1b263b;
   padding: 3px;
@@ -14,7 +14,7 @@
 
 .boton {
   text-decoration: none;
-  color: #2B2730;
+  color: #2b2d42;
   border: 2px solid #1b263b;
   background-color: #EDEDED;
   border-color: none;
@@ -33,7 +33,7 @@
 .botonTienda {
   text-decoration: none;
   color: #edf2f4;
-  background-color: #4e52de;
+  background-color: #ef233c;
   border: 2px solid #edf2f4;
   padding: 3px;
   border-radius: 0.5rem;
@@ -42,8 +42,8 @@
 }
 .botonTienda:hover {
   padding: 4px;
-  border: 2px solid #2B2730;
-  color: #2B2730;
+  border: 2px solid #2b2d42;
+  color: #2b2d42;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -59,7 +59,7 @@
   transform: translate(-50%);
   padding: 10px 20px;
   background-color: #EDEDED;
-  color: #2B2730;
+  color: #2b2d42;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -104,13 +104,13 @@ h3 {
 
 footer p {
   font-weight: 900;
-  color: #2B2730;
+  color: #2b2d42;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
 .logoRedes {
-  color: #73c2df;
+  color: #1b263b;
   text-align: center;
   padding: 2rem;
   cursor: pointer;
@@ -118,7 +118,7 @@ footer p {
 }
 .logoRedes:hover {
   font-size: 5rem;
-  color: #4e52de;
+  color: #ef233c;
 }
 
 .logoWhatsapp {
@@ -175,11 +175,11 @@ h2 {
   margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: 400;
-  color: #2B2730;
+  color: #2b2d42;
 }
 
 p {
-  color: #2B2730;
+  color: #2b2d42;
   font-size: 2rem;
   margin: 2rem;
   font-size: 1.8rem;
@@ -204,7 +204,7 @@ p {
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: #EDEDED;
-  color: #2B2730;
+  color: #2b2d42;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -231,6 +231,14 @@ p {
 
 .hero .botonLeer {
   margin-top: 10px;
+}
+
+.hero.navbar-expanded {
+  margin-top: 200px;
+}
+
+.navbar-toggler[aria-expanded=true] + .navbar-collapse + .hero {
+  margin-top: 15rem; /* Ajusta esta cantidad según sea necesario para que el hero se mueva por debajo del menú */
 }
 
 /*TARJETAS DE LA TIENDA */
@@ -266,13 +274,13 @@ p {
 
 .tiendaDescripcion {
   font-size: 1.5rem;
-  color: #2B2730;
+  color: #2b2d42;
   text-align: center;
 }
 
 .tiendaPrecio {
   font-size: 2rem;
-  color: #2B2730;
+  color: #2b2d42;
   font-weight: 600;
   text-align: center;
 }
@@ -312,16 +320,6 @@ h1 {
   .contenedorTienda {
     grid-template-columns: 2fr;
   }
-  .botonLeer {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    margin-top: 1rem;
-  }
-  .descirpcionHero p {
-    display: block;
-  }
   .descirpcionHero p {
     display: block;
   }
@@ -341,13 +339,21 @@ h1 {
 }
 @media (max-width: 406px) {
   .botonLeer {
-    display: block;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 1rem;
+    width: 100%;
   }
   .descirpcionHero p {
     display: none;
   }
   .footer {
     align-items: center;
+  }
+  .descirpcionHero p:extend(.descirpcionHero p) {
+    color: red;
   }
 }
 @media (min-width: 406px) {
