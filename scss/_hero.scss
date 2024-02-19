@@ -34,7 +34,6 @@ p {
 
 
 .botonLeer {
-  display: none;
   position: absolute;
   bottom: 3rem; 
   left: 50%;
@@ -65,17 +64,3 @@ p {
   max-width: 90%;
   margin-top: 10px;
 }
-
-
-.hero .botonLeer {
-  margin-top: 10px;
-}
-
-.hero.navbar-expanded {
-  margin-top: 200px; 
-}
-
-.navbar-toggler[aria-expanded="true"] + .navbar-collapse + .hero {
-  margin-top: 15rem; /* Ajusta esta cantidad según sea necesario para que el hero se mueva por debajo del menú */
-}
-
