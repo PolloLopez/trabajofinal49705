@@ -4,8 +4,8 @@
 .botonActual {
   text-decoration: none;
   color: #2b2d42;
-  background-color: #8d99ae;
-  border: 2px solid #1b263b;
+  background-color: rgba(55, 38, 117, 0.5607843137);
+  border: 2px solid rgba(32, 47, 77, 0.4666666667);
   padding: 3px;
   border-radius: 1rem;
   font-size: 2rem;
@@ -15,7 +15,7 @@
 .boton {
   text-decoration: none;
   color: #2b2d42;
-  border: 2px solid #1b263b;
+  border: 2px solid rgba(32, 47, 77, 0.4666666667);
   background-color: #EDEDED;
   border-color: none;
   padding: 3px;
@@ -26,7 +26,7 @@
 }
 .boton:hover {
   border: 2px solid #EDEDED;
-  background-color: #8d99ae;
+  background-color: rgba(55, 38, 117, 0.5607843137);
   color: #EDEDED;
 }
 
@@ -52,7 +52,6 @@
 }
 
 .botonLeer {
-  display: none;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -90,7 +89,7 @@
 /* FOOTER */
 footer {
   padding: 3rem;
-  border-top: 2px double #1b263b;
+  border-top: 2px double rgba(32, 47, 77, 0.4666666667);
   text-align: center;
   margin-top: 2rem;
 }
@@ -110,7 +109,7 @@ footer p {
 }
 
 .logoRedes {
-  color: #1b263b;
+  color: rgba(32, 47, 77, 0.4666666667);
   text-align: center;
   padding: 2rem;
   cursor: pointer;
@@ -160,7 +159,7 @@ html {
 
 body {
   font-family: "roboto", sans-serif;
-  background-color: #8d99ae;
+  background-color: rgba(55, 38, 117, 0.5607843137);
 }
 
 /*HERO*/
@@ -197,9 +196,8 @@ p {
 }
 
 .botonLeer {
-  display: none;
   position: absolute;
-  bottom: 20px;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -221,24 +219,12 @@ p {
   display: inline-block;
   font-size: 3.5rem;
   font-weight: 600;
-  color: #1b263b;
+  color: rgba(32, 47, 77, 0.4666666667);
 }
 
 .circoDescripcion p {
   max-width: 90%;
   margin-top: 10px;
-}
-
-.hero .botonLeer {
-  margin-top: 10px;
-}
-
-.hero.navbar-expanded {
-  margin-top: 200px;
-}
-
-.navbar-toggler[aria-expanded=true] + .navbar-collapse + .hero {
-  margin-top: 15rem; /* Ajusta esta cantidad según sea necesario para que el hero se mueva por debajo del menú */
 }
 
 /*TARJETAS DE LA TIENDA */
@@ -320,52 +306,49 @@ h1 {
   .contenedorTienda {
     grid-template-columns: 2fr;
   }
-  .descirpcionHero p {
-    display: block;
-  }
-  .leerMas {
-    display: none;
-  }
   .galeria {
     margin-top: 1rem;
-  }
-}
-@media (min-width: 767px) and (max-width: 1024px) {
-  .contenedorTienda {
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    margin: auto;
-  }
-}
-@media (max-width: 406px) {
-  .botonLeer {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    margin-top: 1rem;
-    width: 100%;
-  }
-  .descirpcionHero p {
-    display: none;
   }
   .footer {
     align-items: center;
   }
-  .descirpcionHero p:extend(.descirpcionHero p) {
-    color: red;
+}
+@media (min-width: 200px) and (max-width: 599px) {
+  /* Estilos para pantallas entre 200px y 499px */
+  .botonLeer {
+    display: inline-block;
+    opacity: 0.5;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 1rem;
+    width: 50%;
+  }
+  .descripcionP {
+    display: none;
   }
 }
-@media (min-width: 406px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* Estilos para pantallas entre 500px y 1024px */
   .botonLeer {
     display: none;
   }
-  .leerMas p {
+  .descripcionP {
+    display: block !important;
+  }
+}
+@media (min-width: 1025px) {
+  /* Estilos para pantallas mayores a 1025px */
+  .botonLeer {
     display: none;
   }
-  .botonLeer:focus + .descirpcionHero p {
+  .descripcionP {
     display: block;
   }
+}
+@media (min-width: 406px) {
+  /* Estilos para pantallas mayores a 406px */
   /* galería */
   .galeria {
     display: flex;
